@@ -170,7 +170,7 @@ def gen_none(params):
 
 def gen_rand(params):
     f = random.sample(effects.values(),1)[0]
-    print f
+    print(f)
     f(params)
 
 def gen_manyrand(params):
@@ -235,7 +235,7 @@ for effect in args.effect:
 fd = open(args.csd,"w")
 out = template.render(params)
 fd.write(out)
-print out
+print(out)
 fd.close()
 
 # get csound to render it
