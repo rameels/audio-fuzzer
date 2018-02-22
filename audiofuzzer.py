@@ -169,7 +169,7 @@ def gen_none(params):
     """DO Nothing"""
 
 def gen_rand(params):
-    f = random.sample(effects.values(),1)[0]
+    f = random.sample(list(effects.values()),1)[0]
     print(f)
     f(params)
 
