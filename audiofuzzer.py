@@ -210,9 +210,11 @@ if args.csd == "RANDOM":
 
 
 # get the jinja going
-env = jinja2.Environment(autoescape=False,
-                  loader=jinja2.FileSystemLoader('./'))    
-template = env.get_template("audio-fuzzer.csd.jinja2")
+env = jinja2.Environment(
+     autoescape=False,
+     loader=jinja2.FileSystemLoader(os.path.dirname(__file__))
+)
+template = env.get_template('audio-fuzzer.csd.jinja2')
 
 # init our data to template
 params = {
